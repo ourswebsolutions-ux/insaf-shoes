@@ -12,8 +12,8 @@ export default async function AdminLoginPage() {
     <div className="admin-login">
       <div className="panel">
         <div style={{ textAlign: 'center' }}>
-          <div style={{ display: 'inline-block' }}><LogoMark size={56} /></div>
-          <h1 style={{ fontSize: 24, marginTop: 8 }}>PunjabShop Admin</h1>
+          <div style={{ display: 'inline-block' }}><LogoMark size={88} /></div>
+          <h1 style={{ fontSize: 24, marginTop: 8 }}>Insaf Shoes Admin</h1>
           <p className="muted" style={{ fontSize: 14 }}>Sign in to manage your store</p>
         </div>
         <Suspense><LoginForm /></Suspense>

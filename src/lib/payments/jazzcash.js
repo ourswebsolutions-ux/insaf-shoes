@@ -39,7 +39,7 @@ export function buildJazzCashRequest({ config, order, returnUrl }) {
     pp_TxnCurrency: 'PKR',
     pp_TxnDateTime: pktTimestamp(now),
     pp_BillReference: order.order_number,
-    pp_Description: `PunjabShop order ${order.order_number}`,
+    pp_Description: `Insaf Shoes order ${order.order_number}`,
     pp_TxnExpiryDateTime: pktTimestamp(new Date(now.getTime() + 24 * 60 * 60 * 1000)),
     pp_ReturnURL: returnUrl,
     ppmpf_1: order.order_number,

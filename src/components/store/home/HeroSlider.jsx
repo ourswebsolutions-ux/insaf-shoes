@@ -12,9 +12,9 @@ function Offer({ text, highlight }) {
       <svg viewBox="0 0 200 120" preserveAspectRatio="none" aria-hidden="true">
         <path
           d="M10 28c30-16 98-22 182-14l-6 18c8 6 8 14 2 20 8 10 6 22-4 30 4 8 0 16-8 20-50 10-112 12-166 4l4-14c-8-6-10-16-2-24-8-10-6-22 4-28-6-4-6-8-6-12z"
-          fill="#17501b"
+          fill="#121212"
         />
-        <path d="M18 34c40-10 100-14 160-10" stroke="#2a7d2c" strokeWidth="6" fill="none" strokeLinecap="round" opacity=".6" />
+        <path d="M18 34c40-10 100-14 160-10" stroke="#c9a043" strokeWidth="6" fill="none" strokeLinecap="round" opacity=".6" />
       </svg>
       <span>
         {text && <small>{text}</small>}

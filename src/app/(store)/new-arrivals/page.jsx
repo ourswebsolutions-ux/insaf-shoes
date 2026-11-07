@@ -1,6 +1,6 @@
 import ProductListing from '@/components/store/listing/ProductListing';
 
-export const metadata = { title: 'New Arrivals', description: 'The latest footwear styles just landed at PunjabShop.', alternates: { canonical: '/new-arrivals' } };
+export const metadata = { title: 'New Arrivals', description: 'The latest footwear styles just landed at Insaf Shoes.', alternates: { canonical: '/new-arrivals' } };
 
 export default async function NewArrivalsPage({ searchParams }) {
   const sp = await searchParams;

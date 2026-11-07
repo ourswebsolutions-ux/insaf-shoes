@@ -44,7 +44,7 @@ export default function SalesChart({ data }) {
               {h > 0 && (
                 <path
                   d={`M${x},${pad.t + ih} V${y + r} Q${x},${y} ${x + r},${y} H${x + bw - r} Q${x + bw},${y} ${x + bw},${y + r} V${pad.t + ih} Z`}
-                  fill="var(--green-600)"
+                  fill="var(--brand-600)"
                   opacity={hover == null || hover === i ? 1 : 0.45}
                 />
               )}

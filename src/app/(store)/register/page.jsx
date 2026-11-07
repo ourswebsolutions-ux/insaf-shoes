@@ -11,7 +11,7 @@ export default async function RegisterPage() {
     <div className="auth-wrap">
       <div className="panel auth-card">
         <h1>Create your account</h1>
-        <p>Join PunjabShop for faster checkout and easy order tracking.</p>
+        <p>Join Insaf Shoes for faster checkout and easy order tracking.</p>
         <Suspense><AuthForm mode="register" /></Suspense>
       </div>
     </div>

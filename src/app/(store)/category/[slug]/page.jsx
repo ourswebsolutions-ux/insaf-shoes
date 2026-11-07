@@ -8,7 +8,7 @@ export async function generateMetadata({ params }) {
   if (!cat) return { title: 'Category not found' };
   return {
     title: cat.seo_title || `${cat.name} – Buy Online in Pakistan`,
-    description: cat.seo_description || cat.description || `Shop ${cat.name} online at PunjabShop with Cash on Delivery all over Pakistan.`,
+    description: cat.seo_description || cat.description || `Shop ${cat.name} online at Insaf Shoes with Cash on Delivery all over Pakistan.`,
     alternates: { canonical: `/category/${cat.slug}` },
     openGraph: cat.image ? { images: [cat.image] } : undefined,
   };

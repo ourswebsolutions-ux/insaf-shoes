@@ -3,7 +3,7 @@ import ContentPage from '@/components/store/content/ContentPage';
 import { formatPrice } from '@/lib/format';
 import { getSettings } from '@/lib/settings';
 
-export const metadata = { title: 'FAQ', description: 'Answers to common questions about orders, delivery, payments and returns at PunjabShop.' };
+export const metadata = { title: 'FAQ', description: 'Answers to common questions about orders, delivery, payments and returns at Insaf Shoes.' };
 
 export default async function FaqPage() {
   const { shipping, store } = await getSettings();

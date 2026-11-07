@@ -19,7 +19,7 @@ export default async function MessagesAdmin() {
         <section className="panel">
           <div className="panel__head"><h3>Contact messages ({messages.length})</h3></div>
           {messages.map((m) => (
-            <div key={m.id} style={{ padding: '14px 20px', borderBottom: '1px solid var(--line-2)', background: m.is_read ? undefined : 'var(--green-50)' }}>
+            <div key={m.id} style={{ padding: '14px 20px', borderBottom: '1px solid var(--line-2)', background: m.is_read ? undefined : 'var(--brand-50)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }}>
                 <span><b>{m.name}</b> <span className="muted" style={{ fontSize: 13 }}>{[m.phone, m.email].filter(Boolean).join(' · ')}</span></span>
                 <span className="muted" style={{ fontSize: 13 }}>{formatDate(m.created_at, true)}</span>

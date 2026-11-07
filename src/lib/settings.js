@@ -4,9 +4,9 @@ import { prisma } from './db';
 
 export const DEFAULT_SETTINGS = {
   store: {
-    name: 'PunjabShop',
+    name: 'Insaf Shoes',
     tagline: 'Walk in Style',
-    about: 'Premium footwear for everyone. Shop smart, walk stylish with PunjabShop.',
+    about: 'Premium footwear for everyone. Shop smart, walk stylish with Insaf Shoes.',
     phone: '+92 300 1234567',
     whatsapp: '+92 300 1234567',
     email: 'info@punjabshop.pk',
@@ -18,7 +18,7 @@ export const DEFAULT_SETTINGS = {
       youtube: 'https://youtube.com/',
       tiktok: 'https://tiktok.com/',
     },
-    seo_title: 'PunjabShop – Premium Footwear Store in Pakistan',
+    seo_title: 'Insaf Shoes – Premium Footwear Store in Pakistan',
     seo_description:
       'Shop trendy sneakers, formal shoes, heels, sandals and chappals online in Pakistan. Cash on Delivery, free delivery and easy returns.',
   },
@@ -39,7 +39,7 @@ export const DEFAULT_SETTINGS = {
     bank_transfer: {
       enabled: true,
       bank_name: 'Meezan Bank',
-      account_title: 'PunjabShop',
+      account_title: 'Insaf Shoes',
       account_number: '0000-0000000000',
       iban: 'PK00MEZN0000000000000000',
       instructions: 'Transfer the total amount and submit your transaction ID on the order page. Your order will be confirmed after verification.',
@@ -80,7 +80,7 @@ export const DEFAULT_SETTINGS = {
     featured_ids: [],
     new_arrivals_title: 'New Arrivals',
     new_arrivals_subtitle: 'Fresh Styles Just In',
-    features_title: 'Why Choose PunjabShop?',
+    features_title: 'Why Choose Insaf Shoes?',
     features: [
       { icon: 'truck', title: 'Free Delivery', text: 'All Over Pakistan' },
       { icon: 'returns', title: 'Easy Returns', text: 'Within 7 Days' },

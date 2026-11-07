@@ -4,7 +4,7 @@ import ContentPage from '@/components/store/content/ContentPage';
 import { whatsappLink } from '@/lib/pakistan';
 import { getSettings } from '@/lib/settings';
 
-export const metadata = { title: 'Contact Us', description: 'Get in touch with PunjabShop by phone, WhatsApp or email.' };
+export const metadata = { title: 'Contact Us', description: 'Get in touch with Insaf Shoes by phone, WhatsApp or email.' };
 
 export default async function ContactPage() {
   const { store } = await getSettings();

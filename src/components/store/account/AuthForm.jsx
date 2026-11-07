@@ -72,7 +72,7 @@ export default function AuthForm({ mode }) {
         {isRegister ? (
           <>Already have an account? <Link className="link" href={`/login${next ? `?next=${encodeURIComponent(next)}` : ''}`}>Log in</Link></>
         ) : (
-          <>New to PunjabShop? <Link className="link" href={`/register${next ? `?next=${encodeURIComponent(next)}` : ''}`}>Create an account</Link></>
+          <>New to Insaf Shoes? <Link className="link" href={`/register${next ? `?next=${encodeURIComponent(next)}` : ''}`}>Create an account</Link></>
         )}
       </p>
     </form>

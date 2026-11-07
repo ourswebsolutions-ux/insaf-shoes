@@ -2,7 +2,7 @@ import ProductListing from '@/components/store/listing/ProductListing';
 
 export const metadata = {
   title: 'Shop All Footwear',
-  description: 'Browse all shoes, sneakers, heels, sandals and chappals at PunjabShop. Cash on Delivery all over Pakistan.',
+  description: 'Browse all shoes, sneakers, heels, sandals and chappals at Insaf Shoes. Cash on Delivery all over Pakistan.',
   alternates: { canonical: '/shop' },
 };
 

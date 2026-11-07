@@ -1,6 +1,6 @@
 import ProductListing from '@/components/store/listing/ProductListing';
 
-export const metadata = { title: 'Sale', description: 'Shop discounted shoes, sneakers, heels and sandals. Limited-time offers at PunjabShop.', alternates: { canonical: '/sale' } };
+export const metadata = { title: 'Sale', description: 'Shop discounted shoes, sneakers, heels and sandals. Limited-time offers at Insaf Shoes.', alternates: { canonical: '/sale' } };
 
 export default async function SalePage({ searchParams }) {
   const sp = await searchParams;

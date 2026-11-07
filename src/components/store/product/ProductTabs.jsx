@@ -107,7 +107,7 @@ export default function ProductTabs({ product, reviews }) {
                 <div key={d.n} style={{ display: 'grid', gridTemplateColumns: '28px 1fr 24px', gap: 8, alignItems: 'center' }}>
                   <span>{d.n}★</span>
                   <span className="ship-progress__bar" style={{ marginTop: 0 }}>
-                    <span style={{ width: `${reviews.length ? (d.c / reviews.length) * 100 : 0}%`, background: '#f5b301' }} />
+                    <span style={{ width: `${reviews.length ? (d.c / reviews.length) * 100 : 0}%`, background: '#d4a72c' }} />
                   </span>
                   <span>{d.c}</span>
                 </div>

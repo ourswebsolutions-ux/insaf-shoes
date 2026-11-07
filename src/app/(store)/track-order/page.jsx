@@ -5,7 +5,7 @@ import { queryOne } from '@/lib/db';
 import { formatDate, formatPrice } from '@/lib/format';
 import { normalizePkPhone } from '@/lib/pakistan';
 
-export const metadata = { title: 'Track Your Order', description: 'Track your PunjabShop order status using your order number and phone number.' };
+export const metadata = { title: 'Track Your Order', description: 'Track your Insaf Shoes order status using your order number and phone number.' };
 
 export default async function TrackOrderPage({ searchParams }) {
   const sp = await searchParams;

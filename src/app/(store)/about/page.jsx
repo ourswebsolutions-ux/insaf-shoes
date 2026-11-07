@@ -5,7 +5,7 @@ import ContentPage from '@/components/store/content/ContentPage';
 import { queryOne } from '@/lib/db';
 import { getSettings } from '@/lib/settings';
 
-export const metadata = { title: 'About Us', description: 'Learn about PunjabShop – premium footwear delivered all over Pakistan.' };
+export const metadata = { title: 'About Us', description: 'Learn about Insaf Shoes – premium footwear delivered all over Pakistan.' };
 
 export default async function AboutPage() {
   const [{ store, homepage }, img] = await Promise.all([

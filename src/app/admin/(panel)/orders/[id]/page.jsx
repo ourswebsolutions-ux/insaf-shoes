@@ -30,7 +30,7 @@ export default async function AdminOrderPage({ params }) {
           <p>Placed {formatDate(order.created_at, true)} · <StatusBadge value={order.status} /> <StatusBadge value={order.payment_status} /></p>
         </div>
         <div className="page-bar__actions">
-          <a className="btn btn--outline btn--sm" href={whatsappLink(order.phone, `Assalam o Alaikum ${order.name}, regarding your PunjabShop order #${order.order_number}`)} target="_blank" rel="noopener noreferrer"><Icon name="whatsapp" size={16} /> WhatsApp customer</a>
+          <a className="btn btn--outline btn--sm" href={whatsappLink(order.phone, `Assalam o Alaikum ${order.name}, regarding your Insaf Shoes order #${order.order_number}`)} target="_blank" rel="noopener noreferrer"><Icon name="whatsapp" size={16} /> WhatsApp customer</a>
           <a className="btn btn--outline btn--sm" href={`/order/${order.order_number}?t=${order.access_token}`} target="_blank"><Icon name="eye" size={16} /> Customer view</a>
         </div>
       </div>

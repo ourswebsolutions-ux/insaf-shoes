@@ -15,7 +15,7 @@ export function autoSubmitPage(action, fields, message = 'Redirecting to secure 
     .map(([k, v]) => `<input type="hidden" name="${esc(k)}" value="${esc(v)}">`)
     .join('');
   const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Redirecting…</title>
-<style>body{font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;color:#17501b;background:#f2f8ef}button{margin-top:12px;padding:10px 18px;border:0;border-radius:999px;background:#17501b;color:#fff;font-weight:600}</style></head>
+<style>body{font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;color:#141414;background:#faf6ec}button{margin-top:12px;padding:10px 18px;border:0;border-radius:999px;background:#141414;color:#e0bf63;font-weight:600}</style></head>
 <body><form id="f" method="post" action="${esc(action)}">${inputs}<p>${esc(message)}</p><noscript><button type="submit">Continue</button></noscript></form>
 <script>document.getElementById('f').submit()</script></body></html>`;
   return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });

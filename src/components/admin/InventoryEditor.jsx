@@ -29,7 +29,7 @@ export default function InventoryEditor({ rows }) {
                   <td>{[r.size && `Size ${r.size}`, r.color].filter(Boolean).join(' · ') || 'Default'}</td>
                   <td className="muted">{r.sku}</td>
                   <td>
-                    <input className="input" type="number" min="0" style={{ width: 90, height: 38, borderColor: v !== r.stock ? 'var(--green-500)' : undefined }} value={v} onChange={(e) => setEdits({ ...edits, [r.id]: Math.max(0, Number(e.target.value) || 0) })} aria-label="Stock" />
+                    <input className="input" type="number" min="0" style={{ width: 90, height: 38, borderColor: v !== r.stock ? 'var(--brand-500)' : undefined }} value={v} onChange={(e) => setEdits({ ...edits, [r.id]: Math.max(0, Number(e.target.value) || 0) })} aria-label="Stock" />
                     {v === 0 ? <span className="status status--cancelled" style={{ marginLeft: 8 }}>Out</span> : v <= r.low_stock_threshold ? <span className="status status--pending" style={{ marginLeft: 8 }}>Low</span> : null}
                   </td>
                   <td className="nowrap">
