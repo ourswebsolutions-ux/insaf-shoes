@@ -27,7 +27,8 @@ npm run dev                                  # http://localhost:3000
 
 - `public/imgs/<category>/` – demo catalog photos (115 products, 127 photos). Sources and licences are listed in `public/imgs/CREDITS.md`: the shop's own photos plus Pexels/Unsplash photos, which are free for commercial use. Photos with visible brand logos were deliberately avoided.
 - `public/images/` – the shop's original photos (kept untouched; cropped copies are used in the catalog).
-- Photos uploaded from the admin panel are stored in `UPLOAD_DIR` (default `./uploads`) and served from `/uploads/...`. Keep that folder on persistent storage and back it up.
+- Photos uploaded from the admin panel go to **Cloudinary** when `CLOUDINARY_URL` is set in the env file (copy the *API environment variable* from the Cloudinary dashboard, e.g. `cloudinary://<api_key>:<api_secret>@<cloud_name>`). They are resized, converted to WebP and stored under the `CLOUDINARY_FOLDER` folder (default `insaf-shoes`). Restart the app after changing env values.
+- Without Cloudinary settings, uploads are stored in `UPLOAD_DIR` (default `./uploads`) and served from `/uploads/...`. Keep that folder on persistent storage and back it up.
 
 The demo catalog is defined in `prisma/catalog-data.mjs` (categories, products, prices, sizes, colours, banners).
 
@@ -47,7 +48,7 @@ Deleting things is always confirmed with the exact number of products affected:
 | Method | Behaviour |
 | --- | --- |
 | Cash on Delivery | Order is placed as *pending / unpaid*. Optional COD fee and maximum order value. |
-| Bank Transfer | Customer sees your bank details on the order page and submits a transaction ID → *pending verification* → admin marks it paid. |
+| Bank / JazzCash / Easypaisa transfer | Customer sees your bank account and (optional) JazzCash / Easypaisa account numbers on the order page and submits a transaction ID → *pending verification* → admin marks it paid. |
 | JazzCash | Hosted checkout. Only a correctly signed response with code `000` and the right amount marks an order paid. Return URL: `/api/payments/jazzcash/callback`. |
 | Easypaisa | Hosted checkout. A successful return becomes *pending verification*; confirm it in the Easypaisa merchant portal. |
 

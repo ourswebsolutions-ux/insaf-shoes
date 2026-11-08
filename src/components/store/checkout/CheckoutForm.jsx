@@ -238,7 +238,7 @@ export default function CheckoutForm({ methods, shipping, addresses, customer })
             )}
             {form.payment_method === 'bank_transfer' && (
               <p className="hint" style={{ marginTop: 10, fontSize: 13, color: 'var(--muted)' }}>
-                Bank details will be shown after you place the order. Submit your transaction ID so we can verify the payment.
+                Our account details will be shown after you place the order. Submit your transaction ID so we can verify the payment.
               </p>
             )}
           </div>

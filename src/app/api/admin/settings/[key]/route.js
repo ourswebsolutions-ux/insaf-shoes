@@ -32,7 +32,7 @@ const SCHEMAS = {
   }),
   payments: z.object({
     cod: z.object({ enabled: z.boolean(), label: str(60), max_order: money }),
-    bank_transfer: z.object({ enabled: z.boolean(), bank_name: str(100), account_title: str(100), account_number: str(60), iban: str(40), instructions: str(500) }),
+    bank_transfer: z.object({ enabled: z.boolean(), bank_name: str(100), account_title: str(100), account_number: str(60), iban: str(40), instructions: str(500), jazzcash_title: str(100), jazzcash_number: str(30), easypaisa_title: str(100), easypaisa_number: str(30) }),
     jazzcash: z.object({ enabled: z.boolean(), sandbox: z.boolean(), merchant_id: str(60), password: str(120), integrity_salt: str(120) }),
     easypaisa: z.object({ enabled: z.boolean(), sandbox: z.boolean(), store_id: str(60), hash_key: str(120) }),
   }),

@@ -17,16 +17,31 @@ export default function PaymentActions({ order, token, bank }) {
   if (order.payment_method === 'bank_transfer') {
     return (
       <section className="panel">
-        <div className="panel__head"><h3>Complete Your Bank Transfer</h3></div>
+        <div className="panel__head"><h3>Complete Your Payment</h3></div>
         <div className="panel__body" style={{ display: 'grid', gap: 16 }}>
-          <dl className="kv">
-            <dt>Bank</dt><dd>{bank.bank_name}</dd>
-            <dt>Account title</dt><dd>{bank.account_title}</dd>
-            <dt>Account no.</dt><dd>{bank.account_number}</dd>
-            {bank.iban && (<><dt>IBAN</dt><dd style={{ wordBreak: 'break-all' }}>{bank.iban}</dd></>)}
-            <dt>Amount</dt><dd><b>{formatPrice(order.total)}</b></dd>
-            <dt>Reference</dt><dd>{order.order_number}</dd>
-          </dl>
+          <p style={{ fontSize: 14 }}>
+            Send <b>{formatPrice(order.total)}</b> to any one of the accounts below and use <b>{order.order_number}</b> as the reference.
+          </p>
+          {bank.account_number && (
+            <dl className="kv">
+              <dt>Bank</dt><dd>{bank.bank_name}</dd>
+              <dt>Account title</dt><dd>{bank.account_title}</dd>
+              <dt>Account no.</dt><dd>{bank.account_number}</dd>
+              {bank.iban && (<><dt>IBAN</dt><dd style={{ wordBreak: 'break-all' }}>{bank.iban}</dd></>)}
+            </dl>
+          )}
+          {bank.jazzcash_number && (
+            <dl className="kv">
+              <dt>JazzCash</dt><dd>{bank.jazzcash_number}</dd>
+              {bank.jazzcash_title && (<><dt>Account title</dt><dd>{bank.jazzcash_title}</dd></>)}
+            </dl>
+          )}
+          {bank.easypaisa_number && (
+            <dl className="kv">
+              <dt>Easypaisa</dt><dd>{bank.easypaisa_number}</dd>
+              {bank.easypaisa_title && (<><dt>Account title</dt><dd>{bank.easypaisa_title}</dd></>)}
+            </dl>
+          )}
           {bank.instructions && <p style={{ fontSize: 14, color: 'var(--muted)' }}>{bank.instructions}</p>}
           {order.payment_status === 'pending_verification' && state.status !== 'done' ? (
             <p className="notice notice--green"><Icon name="clock" /> We’ve received your payment details and are verifying them.</p>

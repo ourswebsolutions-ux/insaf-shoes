@@ -135,12 +135,16 @@ export function PaymentSettingsForm({ payments, secrets, callbackBase }) {
         </div>
       </section>
       <section className="panel">
-        <div className="panel__head"><h3>Bank Transfer</h3><Toggle checked={p.bank_transfer.enabled} onChange={(v) => s.setPath('bank_transfer.enabled', v)} label={p.bank_transfer.enabled ? 'Enabled' : 'Disabled'} /></div>
+        <div className="panel__head"><h3>Bank / Mobile Account Transfer</h3><Toggle checked={p.bank_transfer.enabled} onChange={(v) => s.setPath('bank_transfer.enabled', v)} label={p.bank_transfer.enabled ? 'Enabled' : 'Disabled'} /></div>
         <div className="panel__body form-grid">
           <Field label="Bank name">{txt('bank_transfer.bank_name')}</Field>
           <Field label="Account title">{txt('bank_transfer.account_title')}</Field>
           <Field label="Account number">{txt('bank_transfer.account_number')}</Field>
           <Field label="IBAN">{txt('bank_transfer.iban')}</Field>
+          <Field label="JazzCash account number" hint="Optional – customers can send money to this number">{txt('bank_transfer.jazzcash_number', { placeholder: '03XX XXXXXXX' })}</Field>
+          <Field label="JazzCash account title">{txt('bank_transfer.jazzcash_title')}</Field>
+          <Field label="Easypaisa account number" hint="Optional – customers can send money to this number">{txt('bank_transfer.easypaisa_number', { placeholder: '03XX XXXXXXX' })}</Field>
+          <Field label="Easypaisa account title">{txt('bank_transfer.easypaisa_title')}</Field>
           <Field label="Message for customers" span><textarea className="textarea" style={{ minHeight: 70 }} value={p.bank_transfer.instructions} onChange={(e) => s.setPath('bank_transfer.instructions', e.target.value)} /></Field>
         </div>
       </section>

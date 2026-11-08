@@ -3,6 +3,7 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
+    remotePatterns: [{ protocol: 'https', hostname: 'res.cloudinary.com', pathname: '/**' }],
     localPatterns: [{ pathname: '/uploads/**' }, { pathname: '/images/**' }, { pathname: '/imgs/**' }],
   },
   serverExternalPackages: ['@prisma/client', '@prisma/adapter-mariadb', 'mariadb', 'sharp'],

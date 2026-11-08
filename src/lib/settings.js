@@ -42,6 +42,11 @@ export const DEFAULT_SETTINGS = {
       account_title: 'Insaf Shoes',
       account_number: '0000-0000000000',
       iban: 'PK00MEZN0000000000000000',
+      // Optional mobile wallet accounts customers can send money to by hand.
+      jazzcash_title: '',
+      jazzcash_number: '',
+      easypaisa_title: '',
+      easypaisa_number: '',
       instructions: 'Transfer the total amount and submit your transaction ID on the order page. Your order will be confirmed after verification.',
     },
     jazzcash: {
@@ -123,7 +128,11 @@ export function publicPaymentOptions(settings) {
   if (p.easypaisa.enabled && p.easypaisa.store_id && p.easypaisa.hash_key)
     methods.push({ id: 'easypaisa', label: 'Easypaisa', description: 'Pay securely with your Easypaisa account.' });
   if (p.bank_transfer.enabled)
-    methods.push({ id: 'bank_transfer', label: 'Bank Transfer', description: 'Transfer to our bank account and submit your transaction ID.' });
+    methods.push({
+      id: 'bank_transfer',
+      label: p.bank_transfer.jazzcash_number || p.bank_transfer.easypaisa_number ? 'Bank / JazzCash / Easypaisa Transfer' : 'Bank Transfer',
+      description: 'Send the amount to our account and submit your transaction ID.',
+    });
   return methods;
 }
 
